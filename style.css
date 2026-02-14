@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0a1f44;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: goldenrod;
+}
+
+/* FORM */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;   /* IMPORTANT for responsiveness */
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.todo-input {
+    padding: 10px;
+    width: 300px;
+    max-width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.todo-button {
+    padding: 10px 15px;
+    border: none;
+    background: goldenrod;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.todo-button:hover {
+    background: #ffc107;
+}
+
+/* FILTER SELECT */
+.select select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* TODO LIST */
+.todo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.todo-list {
+    list-style: none;
+    width: 500px;
+    max-width: 100%;
+}
+
+.todo {
+    background: #122b63;
+    color: white;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.todo-item {
+    flex: 1;
+    word-break: break-word;
+}
+
+/* BUTTONS */
+.complete-btn,
+.trash-btn {
+    border: none;
+    padding: 8px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.complete-btn {
+    background: goldenrod;
+    color: black;
+}
+
+.trash-btn {
+    background: crimson;
+    color: white;
+}
+
+.complete-btn:hover {
+    background: #ffc107;
+}
+
+.trash-btn:hover {
+    background: darkred;
+}
+
+/* COMPLETED TASK */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* ANIMATION */
+.slide {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 600px){
+
+    form{
+        flex-direction:row;
+        gap:5px;
+        justify-content:center;
+    }
+
+    .todo-input{
+        width:150px;
+        font-size:14px;
+    }
+
+    .todo-button{
+        padding:8px 10px;
+        font-size:14px;
+    }
+
+    .filter-todo{
+        padding:8px;
+        font-size:14px;
+    }
+
+    .todo{
+        width:90%;
+        padding:8px;
+    }
+
+    .todo-item{
+        font-size:14px;
+    }
+
+    .complete-btn,
+    .trash-btn{
+        padding:5px 7px;
+        font-size:12px;
+    }
+}
+
